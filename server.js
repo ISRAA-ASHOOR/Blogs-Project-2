@@ -17,11 +17,8 @@ const port = process.env.PORT ? process.env.PORT : '3000';
 
 // MIDDLEWARE
 
-// Middleware to parse URL-encoded data from forms
 app.use(express.urlencoded({ extended: false }));
-// Middleware for using HTTP verbs such as PUT or DELETE
 app.use(methodOverride('_method'));
-// Morgan for logging HTTP requests
 app.use(morgan('dev'));
 app.use(
   session({
@@ -42,18 +39,7 @@ app.get('/', async (req, res) => {
 });
 
 app.use('/auth', authController);
-
-// Protected Routes
 app.use(isSignedIn);
-
-app.get('/protected', async (req, res) => {
-  if (req.session.user) {
-    res.send(`Welcome to the party ${req.session.user.username}.`);
-  } else {
-    res.sendStatus(404);
-    // res.send('Sorry, no guests allowed.');
-  }
-});
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
