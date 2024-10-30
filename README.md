@@ -12,6 +12,10 @@ IBlog platform is a user-friendly hub where individuals can effortlessly create,
 
 ![alt text](</assets/Blogs.png>) 
 
+## Route Table 
+
+![alt text](</assets/Route table.png>) 
+
 ## Attributions
 
 - [flexbox design using css tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
