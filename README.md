@@ -12,6 +12,10 @@ IBlog platform is a user-friendly hub where individuals can effortlessly create,
 
 ![alt text](</assets/Blogs.png>) 
 
+## Live app
+
+To view the app [click here](https://iblog-app-9921fffa6a4a.herokuapp.com/)
+
 ## Route Table 
 
 ![alt text](</assets/Route table.png>) 
