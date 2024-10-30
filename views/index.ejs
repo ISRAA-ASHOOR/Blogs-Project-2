@@ -1,21 +1,19 @@
-<!-- views/index.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
     <title>Home Page</title>
   </head>
   <body>
-    <% if (user) { %>
-      <h1>Welcome to the app, <%= user.username %>!</h1>
-      <a href="/auth/sign-out">Sign out</a>
-      <% } else { %>
-      <h1>Welcome to the app, guest.</h1>
-      <p>
-        <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">sign in</a>.
-      </p>
+    <%- include('./partials/_navbar.ejs') %>
+      <% if (user) { %>
+        <h1 class="index">Welcome to IBlog, <%= user.username %>!</h1>
+        <p class="index">An app to share Blogs</p>
+        <% } else { %>
+        <h1 class="index">Welcome to IBlog</h1>
       <% } %>
+    <div class="landing-image"></div>
   </body>
 </html>

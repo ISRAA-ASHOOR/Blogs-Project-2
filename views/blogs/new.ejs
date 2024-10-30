@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <title>Add New Item</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="new-container">
+        <div class="new-form-container">
+    <h1>Add New blog</h1>
+    <form action="/users/<%= user._id %>/blogs" method="POST"  enctype="multipart/form-data">
+        <label for="title">Blog title:</label>
+        <input type="text" name="title" id="title" />
+        <label for="content">content:</label>
+        <textarea type="text" name="content" id="content"></textarea>
+        <label for="author">author name:</label>
+        <input type="text" name="author" id="author" />
+        <label for="image">image url:</label>
+        <input type="text" name="image" id="image" accept="image/*" />
+        <label for="date">date:</label>
+        <input type="datetime-local" name="date" id="date" />
+        <button type="submit">Add blog</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>

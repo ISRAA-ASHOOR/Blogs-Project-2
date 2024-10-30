@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <title>blog</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="show-page-container">
+        <div class="image-container">
+          <img src="<%= blogs.image %>">
+        </div>
+          <div class="show-info-container">
+          <div class="show-header">
+      <h1><%= blogs.title %></h1>
+      </div>
+      <div class="show-details-container">
+      <p><strong>Writen by:</strong> <%= blogs.author %></p>
+      <p><%= blogs.date %></p>
+      <p><strong>Content:</strong> <br /> <%= blogs.content %></p>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

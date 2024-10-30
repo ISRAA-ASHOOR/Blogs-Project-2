@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <title>My Blogs</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="index-header">
+    <h1>Welcome to my Blogs</h1>
+    <a href="/users/<%=user._id%>/blogs/new">Add New Blog</a>
+    </div>
+    <div class="blog-cards">
+        <% if (blogs) { %>
+            <% blogs.forEach((blog)=>{ %>
+                    <a href="/users/<%= user._id %>/blogs/<%= blog._id %>" >
+                        <p><img src="<%= blog.image %>" class="blog-img"/> <br /> <strong><%= blog.title %></strong></p>
+                    </a>
+        <% }) } else {  %>
+                    <p>There are no items in this blog.</p>
+        <% } %>
+</body>
+</html>
